@@ -1,6 +1,7 @@
-import './App.css'
+import "./App.css";
 import { useQuery } from "@tanstack/react-query";
-import {CARDS_API, getAllCards} from './CARDS_API'
+import { CARDS_API, getAllCards } from "./CARDS_API";
+import CardsContent from "./components/CardsContent";
 
 function App() {
   const { isLoading, error, data } = useQuery({
@@ -11,9 +12,9 @@ function App() {
         headers: {
           "Content-Type": "application/json",
           Accept: "application/json",
-         },
+        },
         body: JSON.stringify({
-          query: getAllCards
+          query: getAllCards,
         }),
       });
       if (!res.ok) throw new Error("Failed to fetch");
@@ -24,25 +25,23 @@ function App() {
   if (isLoading) return "Loading...";
 
   if (error) return "An error has occurred: " + error.message;
-console.log(data)
+
+    // Extract the IDs from the response data
+const cardsArray = data.data.portfolioCards
 
   return (
     <>
       <h1>Vite + React</h1>
-      <div>
-      <h1>Cars</h1>
-      {JSON.stringify(data)}
-    </div>
+      <div></div>
       <div className="card">
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+        <h1>Cars</h1>
+        {JSON.stringify(cardsArray[0].description)}
+        {/* <CardsContent data={cardsArray} /> */}
+        {/* <ChangeBackground data={filterData[activeTab]} /> */}
+
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
