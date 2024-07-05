@@ -2,8 +2,15 @@ import "./App.css";
 import { useQuery } from "@tanstack/react-query";
 import { CARDS_API, getAllCards } from "./CARDS_API";
 import CardsContent from "./components/CardsContent";
+import { createContext, useEffect, useState } from "react";
 
+
+export const CardsContext = createContext();
+// const initalCards = null
 function App() {
+  const [cards, setCards] = useState([]);
+
+
   const { isLoading, error, data } = useQuery({
     queryKey: ["cards"],
     queryFn: async () => {
@@ -22,24 +29,40 @@ function App() {
     },
   });
 
+  useEffect(() => {
+    if (data){
+      // const cards = data.data.portfolioCards
+      setCards(data.data.portfolioCards)
+    }
+  },[data])
+
+// setCards(data)
+  // console.log("data", data)
+  // console.log("cards", cards)
+
+  // const filteredData = data.data.portfolioCards
+
+
   if (isLoading) return "Loading...";
 
   if (error) return "An error has occurred: " + error.message;
 
     // Extract the IDs from the response data
-const cardsArray = data.data.portfolioCards
+// const cardsArray = data.data.portfolioCards
 
   return (
     <>
-      <h1>Vite + React</h1>
+    <CardsContext.Provider value={cards}>
+      <h1>Hi, I'm Sarah Elisabeth Cominotti. Welcome to my porfolio</h1>
       <div></div>
       <div className="card">
-        <h1>Cars</h1>
-        {JSON.stringify(cardsArray[0].description)}
-        {/* <CardsContent data={cardsArray} /> */}
-        {/* <ChangeBackground data={filterData[activeTab]} /> */}
-
+        <h2>Work</h2>
+        {/* {JSON.stringify(data)} */}
+        {cards.length > 0 && (
+          <CardsContent cards={cards} />
+        )}
       </div>
+      </CardsContext.Provider>
     </>
   );
 }
