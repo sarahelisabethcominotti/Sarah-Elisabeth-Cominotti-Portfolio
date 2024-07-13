@@ -6,7 +6,7 @@ function CardsContent() {
   const cards = useContext(CardsContext);
 
   return (
-    <div>
+    <div className="work-section">
         {cards.map((card) => (
         <div key={card.id} className="card-item">
           <h3>{card.title}</h3>
@@ -14,7 +14,7 @@ function CardsContent() {
           <a href={card.projectLink}>Project Link</a>
           <p>Tags: {card.tag}</p>
           {card.backgroundImage && (
-            <img src={card.backgroundImage} alt={card.title} />
+            <img src={card.backgroundImage.url} alt={card.title} height="200px" width="200px"/>
           )}
         </div>
       ))}

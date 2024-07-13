@@ -92,14 +92,11 @@ function App() {
       // const cards = data.data.portfolioCards
       setCards(data.cards.data.portfolioCards);
       setSkills(data.skills.data.portfolioSkills);
+      console.log(data.skills.data.portfolioSkills[1].logo.url)
+
     }
   }, [data]);
 
-  console.log(skills);
-  console.log(cards);
-
-  // const finalData = cards + skills
-  // console.log(finalData)
 
   if (isLoading) return "Loading...";
 
@@ -107,6 +104,7 @@ function App() {
 
   return (
     <>
+    
       <CardsContext.Provider value={cards}>
         <h2>Work</h2>
         {cards.length > 0 && <CardsContent cards={cards} />}
