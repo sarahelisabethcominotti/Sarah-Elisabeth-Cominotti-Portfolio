@@ -29,13 +29,14 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #333;
+  background-color: #78ABA8;
   color: #fff;
   padding: 15px;
 
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 
   .navigation,
   .contacts {
@@ -54,6 +55,9 @@ nav {
   }
 }
 
+section {
+  padding: 60px 0;
+}
 .skills-section {
   display: flex;
   flex-direction: row;
@@ -79,7 +83,8 @@ nav {
         max-width: 70px;
         border: 1px solid black;
         border-radius: 7px;
-        background-color: #fcdc94;
+        background-color: #78ABA8;
+        color: white;
         padding: 0 5px;
       }
     }
@@ -88,7 +93,6 @@ nav {
 
 .about-section {
   display: flex;
-  text-align: left;
   div {
     display: flex;
     align-items: center;
@@ -98,9 +102,14 @@ nav {
     border-radius: 100px;
     width: 200px;
     height: 200px;
-    box-shadow: 0 0 8px 8px white inset;
+    box-shadow: 0 0 12px 8px #ffffff inset;
+  }
+  p {
+    text-align: left;
+
   }
 }
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;

@@ -5,6 +5,9 @@ function SkillsContent() {
   const skills = useContext(SkillsContext);
 
   return (
+    <section>
+            <h2 id="skills">Skills</h2>
+
     <div className="skills-section">
       {skills.map((skill) => (
         <div key={skill.id} className="skill-logo">
@@ -14,6 +17,7 @@ function SkillsContent() {
         </div>
       ))}
     </div>
+    </section>
   );
 }
 
