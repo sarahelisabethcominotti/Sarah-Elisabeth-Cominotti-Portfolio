@@ -10,7 +10,7 @@ p {
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: white;
   text-decoration: none;
 }
 
@@ -22,6 +22,36 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: #ef9c66;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .navigation,
+  .contacts {
+    ul {
+      list-style-type: none;
+      overflow: hidden;
+      margin: 0;
+      li {
+        float: left;
+
+        a {
+          padding: 16px;
+        }
+      }
+    }
+  }
 }
 
 .skills-section {
@@ -48,32 +78,28 @@ body {
       .card-tag {
         max-width: 70px;
         border: 1px solid black;
-        border-radius:7px;
-        background-color: #FCDC94;
+        border-radius: 7px;
+        background-color: #fcdc94;
         padding: 0 5px;
       }
     }
   }
-
-  
 }
 
 .about-section {
   display: flex;
+  text-align: left;
   div {
     display: flex;
     align-items: center;
     column-gap: 100px;
-}
+  }
   img {
     border-radius: 100px;
     width: 200px;
-     height: 200px;
-     box-shadow: 0 0 8px 8px white inset;
-
-
+    height: 200px;
+    box-shadow: 0 0 8px 8px white inset;
   }
-
 }
 h1 {
   font-size: 3.2em;
@@ -82,14 +108,13 @@ h1 {
 }
 
 h2 {
-  text-decoration: underline ;
+  text-decoration: underline;
   text-decoration-color: white;
-
 }
 
 .highlight-word {
   font-weight: bold;
-  color: white
+  color: white;
 }
 
 /* button {
@@ -115,8 +140,6 @@ button:focus-visible {
   .work-section {
     grid-template-columns: repeat(1, minmax(150px, 300px));
     grid-template-rows: repeat(auto-fill);
-   
-
   }
 
   .skills-section {
@@ -131,8 +154,7 @@ button:focus-visible {
   .about-section {
     display: block;
     div {
-      display: block; 
+      display: block;
     }
-
   }
 }
