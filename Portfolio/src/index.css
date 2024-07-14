@@ -1,7 +1,11 @@
 :root {
-  font-family: 'Inconsolata';
+  font-family: "Inconsolata";
   line-height: 1.5;
   font-weight: 400;
+}
+
+p {
+  margin: 0;
 }
 
 a {
@@ -17,13 +21,13 @@ body {
   justify-content: space-between;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #EF9C66;
+  background-color: #ef9c66;
 }
 
 .skills-section {
-display: flex;
-flex-direction: row;
-justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .work-section {
@@ -33,12 +37,31 @@ justify-content: space-between;
   row-gap: 50px;
   column-gap: 30px;
   justify-content: center;
+  /* div {
+    border: 1px solid black;
+    padding: 10px;
+  
+  } */
+  /* border-radius: 5px;
+  border-color: black; */
+  .tags-section {
+    display: flex;
+    column-gap: 10px;
+    justify-content: center;
+    .card-tag {
+      max-width: 70px;
+      border: 1px solid black;
+      border-radius:7px;
+      background-color: #c8cfa0;
+      padding: 0 5px;
+    }
+  }
 }
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
-  color: white
-} 
+  color: white;
+}
 
 /* button {
   border-radius: 8px;
@@ -60,7 +83,6 @@ button:focus-visible {
 } */
 
 @media (max-width: 600px) {
-
   .work-section {
     grid-template-columns: repeat(1, minmax(150px, 250px));
     grid-template-rows: repeat(auto-fill, 500px);
@@ -71,7 +93,7 @@ button:focus-visible {
     grid-template-columns: repeat(2, max(100px));
     grid-template-rows: repeat(auto-fill);
     justify-content: space-around;
-    }
-  
+    border-color: black;
+    border-radius: 5px;
+  }
 }
-

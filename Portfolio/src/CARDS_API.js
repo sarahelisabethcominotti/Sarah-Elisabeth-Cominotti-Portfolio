@@ -8,6 +8,7 @@ query MyQuery {
     id
     description
     projectLink
+    gitHubLink
     tag
     title
     backgroundImage {
