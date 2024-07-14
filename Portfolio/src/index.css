@@ -37,30 +37,59 @@ body {
   row-gap: 50px;
   column-gap: 30px;
   justify-content: center;
-  /* div {
-    border: 1px solid black;
+  .card-item {
+    border: 1px solid white;
     padding: 10px;
-  
-  } */
-  /* border-radius: 5px;
-  border-color: black; */
-  .tags-section {
-    display: flex;
-    column-gap: 10px;
-    justify-content: center;
-    .card-tag {
-      max-width: 70px;
-      border: 1px solid black;
-      border-radius:7px;
-      background-color: #c8cfa0;
-      padding: 0 5px;
+    .tags-section {
+      margin: 5px;
+      display: flex;
+      column-gap: 10px;
+      justify-content: center;
+      .card-tag {
+        max-width: 70px;
+        border: 1px solid black;
+        border-radius:7px;
+        background-color: #FCDC94;
+        padding: 0 5px;
+      }
     }
   }
+
+  
+}
+
+.about-section {
+  display: flex;
+  div {
+    display: flex;
+    align-items: center;
+    column-gap: 100px;
+}
+  img {
+    border-radius: 100px;
+    width: 200px;
+     height: 200px;
+     box-shadow: 0 0 8px 8px white inset;
+
+
+  }
+
 }
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
   color: white;
+}
+
+h2 {
+  text-decoration: underline ;
+  text-decoration-color: white;
+
+}
+
+.highlight-word {
+  font-weight: bold;
+  color: white
 }
 
 /* button {
@@ -84,8 +113,10 @@ button:focus-visible {
 
 @media (max-width: 600px) {
   .work-section {
-    grid-template-columns: repeat(1, minmax(150px, 250px));
-    grid-template-rows: repeat(auto-fill, 500px);
+    grid-template-columns: repeat(1, minmax(150px, 300px));
+    grid-template-rows: repeat(auto-fill);
+   
+
   }
 
   .skills-section {
@@ -95,5 +126,13 @@ button:focus-visible {
     justify-content: space-around;
     border-color: black;
     border-radius: 5px;
+  }
+
+  .about-section {
+    display: block;
+    div {
+      display: block; 
+    }
+
   }
 }

@@ -9,6 +9,7 @@ import { CARDS_API, getAllCards } from "./CARDS_API";
 import CardsContent from "./components/CardsContent";
 import { SKILLS_API, getAllSkills } from "./SKILLS_API";
 import SkillsContent from "./components/SkillsSection";
+import HeaderSection from "./components/AboutMeSection";
 
 export const CardsContext = createContext();
 export const SkillsContext = createContext()
@@ -104,7 +105,7 @@ function App() {
 
   return (
     <>
-    
+    <HeaderSection/>
       <CardsContext.Provider value={cards}>
         <h2>Work</h2>
         {cards.length > 0 && <CardsContent cards={cards} />}
