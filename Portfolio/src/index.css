@@ -29,7 +29,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #78ABA8;
+  background-color: #78aba8;
   color: #fff;
   padding: 15px;
 
@@ -38,18 +38,29 @@ nav {
   justify-content: space-between;
   align-items: center;
 
+  .hamburger-menu {
+    display: none;
+  }
+  
   .navigation,
   .contacts {
     ul {
       list-style-type: none;
       overflow: hidden;
       margin: 0;
+      padding: 0;
       li {
         float: left;
-
         a {
           padding: 16px;
         }
+      }
+    }
+  }
+  .contacts {
+    ul {
+      li {
+        width: 45px;
       }
     }
   }
@@ -83,7 +94,7 @@ section {
         max-width: 70px;
         border: 1px solid black;
         border-radius: 7px;
-        background-color: #78ABA8;
+        background-color: #78aba8;
         color: white;
         padding: 0 5px;
       }
@@ -106,7 +117,6 @@ section {
   }
   p {
     text-align: left;
-
   }
 }
 
@@ -146,6 +156,26 @@ button:focus-visible {
 } */
 
 @media (max-width: 600px) {
+  .navigation {
+    display: none;
+  }
+  nav {
+    width: 100%;
+    .hamburger-menu {
+      display: block;
+      ul {
+        list-style-type: none;
+        padding: 0
+      }
+    }
+  
+  }
+  h1 {
+    font-size: 2.2em;
+    line-height: 1;
+    color: white;
+  }
+
   .work-section {
     grid-template-columns: repeat(1, minmax(150px, 300px));
     grid-template-rows: repeat(auto-fill);
@@ -164,6 +194,21 @@ button:focus-visible {
     display: block;
     div {
       display: block;
+    }
+  }
+}
+
+@media (max-width: 381px) {
+  nav {
+    p {
+      max-width: 120px;
+    }
+    .contacts {
+      ul {
+        li {
+          width: 45px;
+        }
+      }
     }
   }
 }
