@@ -37,11 +37,22 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
-  .hamburger-menu {
+  .topnav {
     display: none;
+    a {
+      color: white;
+      text-decoration: none;
+      display: block;
+    }
+
+    a.icon {
+      background: none;
+      display: block;
+      right: 0;
+      top: 0;
+    }
   }
-  
+
   .navigation,
   .contacts {
     ul {
@@ -136,39 +147,23 @@ h2 {
   color: white;
 }
 
-/* button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-} */
-
 @media (max-width: 600px) {
   .navigation {
     display: none;
   }
   nav {
-    width: 100%;
-    .hamburger-menu {
-      display: block;
-      ul {
-        list-style-type: none;
-        padding: 0
-      }
+    width: 95%;
+    p {
+      max-width: 120px;
     }
-  
+    .topnav {
+      display: block;
+    }
+    #myLinks {
+      min-width: 80px;
+      font-size: 15px;
+      display: none;
+    }
   }
   h1 {
     font-size: 2.2em;
@@ -200,13 +195,13 @@ button:focus-visible {
 
 @media (max-width: 381px) {
   nav {
-    p {
-      max-width: 120px;
-    }
     .contacts {
       ul {
         li {
-          width: 45px;
+          width: 35px;
+          a svg {
+            width: 23px;
+          }
         }
       }
     }

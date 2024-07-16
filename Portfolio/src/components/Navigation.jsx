@@ -1,3 +1,5 @@
+import HamburgerMenu from "./HamburgerMenu";
+
 function Navigation() {
   return (
     <nav>
@@ -74,46 +76,7 @@ function Navigation() {
           </li>
         </ul>
       </div>
-      <div className="hamburger-menu">
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon">
-            <svg
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-            >
-              <path
-                fill="#ffffff"
-                d="M19 4a1 1 0 01-1 1H2a1 1 0 010-2h16a1 1 0 011 1zm0 6a1 1 0 01-1 1H2a1 1 0 110-2h16a1 1 0 011 1zm-1 7a1 1 0 100-2H2a1 1 0 100 2h16z"
-              />
-            </svg>
-          </span>
-        </button>
-        
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-          <ul>
-          <li className="nav-item">
-            <a className="nav-link" href="#about-me">About Me</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#work">Work</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#skills">Skills</a>
-          </li>
-        </ul>
-          </ul>
-        </div>
-      </div>
+      <HamburgerMenu/>
       <div className="navigation">
         <ul>
           <li>

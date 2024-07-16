@@ -16,7 +16,7 @@ function CardsContent() {
             {/* <p>Tags: {card.tag}</p> */}
             <div className="tags-section">
               {card.tag.map((tag) => (
-                <div key={tag.tag} className="card-tag">
+                <div key={tag} className="card-tag">
                   <p>{tag}</p>
                 </div>
               ))}
