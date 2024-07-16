@@ -30,7 +30,7 @@ function CardsContent() {
               />
             )}
             <div>
-              <a href={card.projectLink}>
+              <a target="blank" href={card.projectLink}>
                 <svg
                   fill="#000000"
                   width="40px"

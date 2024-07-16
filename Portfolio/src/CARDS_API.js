@@ -4,7 +4,8 @@ export const CARDS_API =
 
 export const getAllCards = `
 query MyQuery {
-  portfolioCards {
+  portfolioCards(orderBy: cardId_DESC) {
+  cardId
     id
     description
     projectLink
