@@ -84,6 +84,9 @@ section {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  p {
+    color: black;
+  }
 }
 
 .work-section {
@@ -109,7 +112,11 @@ section {
         color: white;
         padding: 0 5px;
       }
+
     }
+  }
+  img {
+    border-radius: 5px;
   }
 }
 
@@ -182,7 +189,7 @@ h2 {
     grid-template-rows: repeat(auto-fill);
     justify-content: space-around;
     border-color: black;
-    border-radius: 5px;    
+    border-radius: 5px;
   }
 
   .about-section {
