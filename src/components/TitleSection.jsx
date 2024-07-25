@@ -1,7 +1,7 @@
 
 function TitleSection() {
   return (
-    <section>
+    <section className="title-section">
     
     <h1>
     &#123; <span id="text-container"></span> &#125;
