@@ -1,3 +1,4 @@
+
 import "./App.css";
 import gsap from "gsap";
 import TextPlugin from "gsap/src/TextPlugin";
