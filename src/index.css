@@ -218,6 +218,7 @@ h2 {
     
   }
   .title-section{
-    padding-top: 60px
+    padding-top: 60px;
+  min-height: 195px;
     }
 }
