@@ -185,8 +185,8 @@ h2 {
 
   .skills-section {
     display: grid;
-    grid-template-columns: repeat(2, max(100px));
-    grid-template-rows: repeat(auto-fill);
+    grid-template-columns: repeat(3, max(100px));
+    /* grid-template-rows: repeat(auto-fill); */
     justify-content: space-around;
     border-color: black;
     border-radius: 5px;

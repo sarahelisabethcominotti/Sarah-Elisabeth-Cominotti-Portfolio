@@ -105,7 +105,7 @@ function App() {
   if (isLoading) return "Loading...";
 
   if (error) return "An error has occurred: " + error.message;
-
+// console.log(skills)
   return (
     <>
     <Navigation/>

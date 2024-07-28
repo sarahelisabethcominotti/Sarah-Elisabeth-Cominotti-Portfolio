@@ -4,7 +4,7 @@ export const CARDS_API =
 
 export const getAllCards = `
 query MyQuery {
-  portfolioCards(orderBy: cardId_DESC) {
+  portfolioCards(orderBy: cardId_DESC, first: 100) {
   cardId
     id
     description

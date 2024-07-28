@@ -4,7 +4,7 @@ export const SKILLS_API =
 
 export const getAllSkills = `
 query MyQuery {
-  portfolioSkills {
+  portfolioSkills(first: 100) {
     id
     altTag
     logo {

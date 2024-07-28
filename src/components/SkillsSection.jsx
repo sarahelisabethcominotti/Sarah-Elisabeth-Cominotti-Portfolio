@@ -3,7 +3,7 @@ import { SkillsContext } from "../App";
 
 function SkillsContent() {
   const skills = useContext(SkillsContext);
-
+console.log(skills)
   return (
     <section>
       <h2 id="skills">Skills</h2>
