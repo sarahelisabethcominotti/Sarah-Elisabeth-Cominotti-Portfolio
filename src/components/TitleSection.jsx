@@ -3,9 +3,9 @@ function TitleSection() {
   return (
     <section className="title-section">
     
-    <h1>
-    &#123; <span id="text-container"></span> &#125;
-  </h1>
+    <h1 className="neon-text">
+   Sarah Elisabeth
+  </h1><h1 className="neon-text">Cominotti</h1>
   </section>
   )
 }

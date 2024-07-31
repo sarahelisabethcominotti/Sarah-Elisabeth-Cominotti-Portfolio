@@ -6,7 +6,7 @@ function SkillsContent() {
 console.log(skills)
   return (
     <section>
-      <h2 id="skills">Skills</h2>
+      <h2 id="skills" className="neon-title-text">Skills</h2>
 
       <div className="skills-section">
         {skills.map((skill) => (
@@ -20,7 +20,7 @@ console.log(skills)
                 width="50px"
               />
             )}
-            <p>{skill.altTag}</p>
+            <p className="neon-text">{skill.altTag}</p>
           </div>
         ))}
       </div>

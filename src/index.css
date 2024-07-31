@@ -1,7 +1,8 @@
 :root {
-  font-family: "Inconsolata";
+  font-family: "Tilt Neon", sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  color: white
 }
 
 p {
@@ -10,7 +11,7 @@ p {
 
 a {
   font-weight: 500;
-  color: white;
+  /* color: white; */
   text-decoration: none;
 }
 
@@ -21,7 +22,7 @@ body {
   justify-content: space-between;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #ef9c66;
+  background-color: #060023;
 }
 
 nav {
@@ -29,8 +30,8 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #78aba8;
-  color: #fff;
+  /* background-color: #78aba8; */
+  /* color: #fff; */
   padding: 15px;
 
   display: flex;
@@ -59,11 +60,12 @@ nav {
       list-style-type: none;
       overflow: hidden;
       margin: 0;
-      padding: 0;
+      padding: 0 20px 0 0;
       li {
         float: left;
         a {
           padding: 16px;
+          color: white
         }
       }
     }
@@ -85,7 +87,11 @@ section {
   flex-direction: row;
   justify-content: space-between;
   p {
-    color: black;
+    color: white;
+  }
+  img {
+    -webkit-filter: drop-shadow(0px 0px 7px #fff);
+    filter: drop-shadow(0px 0px 7px #fff);
   }
 }
 
@@ -97,7 +103,10 @@ section {
   column-gap: 30px;
   justify-content: center;
   .card-item {
-    border: 1px solid white;
+    border: 2px solid white;
+    box-shadow:      
+    0px 0px 20px 5px #d9ff00 ,
+    0px 0px 20px 5px #d9ff00 inset;    
     padding: 10px;
     .tags-section {
       margin: 5px;
@@ -106,14 +115,26 @@ section {
       justify-content: center;
       .card-tag {
         max-width: 70px;
-        border: 1px solid black;
+        border: 2px solid white;
+        box-shadow:      
+        0px 0px 10px 0px #ff00c8 ,
+        0px 0px 10px 0px #ff00c8 ;  
         border-radius: 7px;
-        background-color: #78aba8;
-        color: white;
         padding: 0 5px;
       }
-
     }
+ 
+        svg {
+          margin: 5px;
+          border: 2px solid white;
+          border-radius: 50px;
+        box-shadow:      
+        0px 0px 20px 0px #ff00c8 ,
+        0px 0px 20px 0px #ff00c8 ;  
+          /* -webkit-filter: drop-shadow(0 0 5px #ff00c8);
+    filter: drop-shadow(0 0 10px #ff00c8); */
+        }
+     
   }
   img {
     border-radius: 5px;
@@ -131,27 +152,46 @@ section {
     border-radius: 100px;
     width: 200px;
     height: 200px;
-    box-shadow: 0 0 12px 8px #ffffff inset;
+    border: 2px solid white;
+    box-shadow:      
+    0px 0px 20px 5px #ff00c8 ,
+    0px 0px 20px 5px #ff00c8 inset;
   }
   p {
     text-align: left;
   }
 }
 
+.neon-title-text {
+  text-shadow:
+      0 0 5px #ff00c8,
+      0 0 10px #ff00c8,
+      0 0 20px #ff00c8,
+      0 0 30px #ff00c8,
+      0 0 60px #ff00c8;
+}
+
+.neon-text {
+  text-shadow:
+      0 0 5px #0ff,
+      0 0 10px #0ff,
+      0 0 20px #0ff,
+      0 0 30px #0ff,
+      0 0 60px #0ff;
+}
+
 h1 {
   font-size: 3.2em;
-  line-height: 1.1;
-  color: white;
+  line-height: 0.5;
 }
 
 h2 {
   text-decoration: underline;
-  text-decoration-color: white;
-}
+  }
 
 .highlight-word {
-  font-weight: bold;
-  color: white;
+  /* font-weight: bold;
+  color: white; */
 }
 
 @media (max-width: 600px) {
@@ -186,7 +226,7 @@ h2 {
   .skills-section {
     display: grid;
     grid-template-columns: repeat(3, max(100px));
-    /* grid-template-rows: repeat(auto-fill); */
+    grid-template-rows: repeat(auto-fill);
     justify-content: space-around;
     border-color: black;
     border-radius: 5px;
