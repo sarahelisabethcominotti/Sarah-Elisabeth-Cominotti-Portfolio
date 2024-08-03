@@ -2,7 +2,7 @@
   font-family: "Tilt Neon", sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: white
+  color: white;
 }
 
 p {
@@ -26,6 +26,8 @@ body {
 }
 
 nav {
+  background: #060023;
+  box-shadow: 0px 0px 10px 0px #ffffff, 0px 0px 10px 0px #ffffff;
   position: fixed;
   top: 0;
   left: 0;
@@ -38,6 +40,7 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
   .topnav {
     display: none;
     a {
@@ -65,7 +68,7 @@ nav {
         float: left;
         a {
           padding: 16px;
-          color: white
+          color: white;
         }
       }
     }
@@ -80,7 +83,7 @@ nav {
 }
 
 section {
-  padding: 60px 0;
+  padding: 60px 0 0 0;
 }
 .skills-section {
   display: flex;
@@ -104,9 +107,7 @@ section {
   justify-content: center;
   .card-item {
     border: 2px solid white;
-    box-shadow:      
-    0px 0px 20px 5px #d9ff00 ,
-    0px 0px 20px 5px #d9ff00 inset;    
+    box-shadow: 0px 0px 20px 5px #d9ff00, 0px 0px 20px 5px #d9ff00 inset;
     padding: 10px;
     .tags-section {
       margin: 5px;
@@ -116,25 +117,23 @@ section {
       .card-tag {
         max-width: 70px;
         border: 2px solid white;
-        box-shadow:      
-        0px 0px 10px 0px #ff00c8 ,
-        0px 0px 10px 0px #ff00c8 ;  
+        box-shadow: 0px 0px 10px 0px #ff00c8, 0px 0px 10px 0px #ff00c8;
         border-radius: 7px;
         padding: 0 5px;
       }
     }
- 
-        svg {
-          margin: 5px;
-          border: 2px solid white;
-          border-radius: 50px;
-        box-shadow:      
-        0px 0px 20px 0px #ff00c8 ,
-        0px 0px 20px 0px #ff00c8 ;  
-          /* -webkit-filter: drop-shadow(0 0 5px #ff00c8);
+
+    svg {
+      margin: 5px;
+      border: 2px solid white;
+      border-radius: 50px;
+      box-shadow: 0px 0px 20px 0px #ff00c8, 0px 0px 20px 0px #ff00c8;
+      /* -webkit-filter: drop-shadow(0 0 5px #ff00c8);
     filter: drop-shadow(0 0 10px #ff00c8); */
-        }
-     
+    }
+    svg:hover {
+      box-shadow: 0px 0px 20px 0px #0ff, 0px 0px 20px 0px #0ff;
+    }
   }
   img {
     border-radius: 5px;
@@ -153,31 +152,22 @@ section {
     width: 200px;
     height: 200px;
     border: 2px solid white;
-    box-shadow:      
-    0px 0px 20px 5px #ff00c8 ,
-    0px 0px 20px 5px #ff00c8 inset;
+    box-shadow: 0px 0px 20px 5px #ff00c8, 0px 0px 20px 5px #ff00c8 inset;
   }
+
   p {
     text-align: left;
   }
 }
 
 .neon-title-text {
-  text-shadow:
-      0 0 5px #ff00c8,
-      0 0 10px #ff00c8,
-      0 0 20px #ff00c8,
-      0 0 30px #ff00c8,
-      0 0 60px #ff00c8;
+  text-shadow: 0 0 5px #ff00c8, 0 0 10px #ff00c8, 0 0 20px #ff00c8,
+    0 0 30px #ff00c8, 0 0 60px #ff00c8;
 }
 
 .neon-text {
-  text-shadow:
-      0 0 5px #0ff,
-      0 0 10px #0ff,
-      0 0 20px #0ff,
-      0 0 30px #0ff,
-      0 0 60px #0ff;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff,
+    0 0 60px #0ff;
 }
 
 h1 {
@@ -187,12 +177,36 @@ h1 {
 
 h2 {
   text-decoration: underline;
-  }
+}
 
 .highlight-word {
   /* font-weight: bold;
   color: white; */
 }
+
+.hover-shadow:hover {
+  text-shadow: 0 0 5px #d9ff00, 0 0 10px #d9ff00, 0 0 20px #d9ff00,
+    0 0 30px #d9ff00, 0 0 60px #d9ff00;
+}
+
+/* .hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 70%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 15px;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  box-shadow:      
+  0px 0px 20px 5px #d9ff00 ,
+  0px 0px 20px 5px #d9ff00 inset;    
+} */
 
 @media (max-width: 600px) {
   .navigation {
@@ -253,12 +267,7 @@ h2 {
       }
     }
   }
-  section {
-    padding: 0;
-    
-  }
-  .title-section{
+  .title-section {
     padding-top: 60px;
-  min-height: 195px;
-    }
+  }
 }

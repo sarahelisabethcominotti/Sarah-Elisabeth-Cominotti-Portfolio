@@ -80,13 +80,13 @@ function Navigation() {
       <div className="navigation">
         <ul>
           <li>
-            <a href="#about-me">About Me</a>
+            <a href="#about-me" className="hover-shadow">About Me</a>
           </li>
           <li>
-            <a href="#work">Work</a>
+            <a href="#work" className="hover-shadow">Work</a>
           </li>
-          <li>
-            <a href="#skills">Skills</a>
+          <li >
+            <a href="#skills" className="hover-shadow">Skills</a>
           </li>
         </ul>
       </div>
