@@ -70,6 +70,15 @@ nav {
           padding: 16px;
           color: white;
         }
+        svg:hover {
+          fill: #d9ff00;
+          g {
+            fill: #d9ff00;
+          }
+          path {
+            fill: #d9ff00
+          }
+        }
       }
     }
   }
@@ -179,34 +188,12 @@ h2 {
   text-decoration: underline;
 }
 
-.highlight-word {
-  /* font-weight: bold;
-  color: white; */
-}
-
 .hover-shadow:hover {
   text-shadow: 0 0 5px #d9ff00, 0 0 10px #d9ff00, 0 0 20px #d9ff00,
     0 0 30px #d9ff00, 0 0 60px #d9ff00;
+    color: #d9ff00
 }
 
-/* .hover-underline-animation::after {
-  content: '';
-  position: absolute;
-  width: 70%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 15px;
-  background-color: #fff;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-
-.hover-underline-animation:hover::after {
-  box-shadow:      
-  0px 0px 20px 5px #d9ff00 ,
-  0px 0px 20px 5px #d9ff00 inset;    
-} */
 
 @media (max-width: 600px) {
   .navigation {
