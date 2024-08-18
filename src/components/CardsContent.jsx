@@ -2,6 +2,8 @@ import { useContext } from "react";
 import { CardsContext } from "../App";
 
 function CardsContent() {
+
+  
   const cards = useContext(CardsContext);
 
   return (
