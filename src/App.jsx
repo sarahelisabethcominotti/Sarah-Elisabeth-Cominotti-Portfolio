@@ -147,7 +147,7 @@ function App() {
           start: 'bottom 100%',
           end: '+=4000px', 
           scrub: true,
-          markers: true, 
+          markers: false, 
         },
       });
     } else {
