@@ -77,11 +77,26 @@ nav {
             fill: #d9ff00;
           }
           path {
-            fill: #d9ff00
+            fill: #d9ff00;
           }
         }
       }
     }
+  }
+  #myLinks {
+    position: absolute;
+    top: 85px;
+    right: 6px;
+    background-color: #060023;
+    a {
+      padding: 5px 0;
+      border: 0.1px solid white;
+      box-shadow: 0px 0px 10px 1px #ff00c8, 0px 0px 5px 1px #ff00c8 inset;
+    }
+  }
+  #cross {
+    display: none;
+    width: 12px
   }
   .contacts {
     ul {
@@ -192,9 +207,8 @@ h2 {
 .hover-shadow:hover {
   text-shadow: 0 0 5px #d9ff00, 0 0 10px #d9ff00, 0 0 20px #d9ff00,
     0 0 30px #d9ff00, 0 0 60px #d9ff00;
-    color: #d9ff00
+  color: #d9ff00;
 }
-
 
 @media (max-width: 600px) {
   .navigation {

@@ -7,7 +7,7 @@ function Navigation() {
       <div className="contacts">
         <ul>
           <li>
-            <a href="mailto:sarahelisabethcominotti@gmail.com">
+            <a href="mailto:sarahelisabethcominotti@gmail.com" target="_blank">
               <svg
                 height="30px"
                 width="30px"
@@ -36,7 +36,7 @@ function Navigation() {
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/sarah-elisabeth-cominotti/">
+            <a href="https://www.linkedin.com/in/sarah-elisabeth-cominotti/" target="_blank">
               <svg
                 width="31px"
                 height="31px"
@@ -52,7 +52,7 @@ function Navigation() {
             </a>
           </li>
           <li>
-            <a href="https://github.com/sarahelisabethcominotti">
+            <a href="https://github.com/sarahelisabethcominotti" target="_blank">
               <svg
                 width="30px"
                 height="30px"
@@ -76,17 +76,65 @@ function Navigation() {
           </li>
         </ul>
       </div>
-      <HamburgerMenu/>
+      <HamburgerMenu />
       <div className="navigation">
         <ul>
           <li>
-            <a href="#about-me" className="hover-shadow">About Me</a>
+            <a
+              // href="#about-me"
+              className="hover-shadow"
+              onClick={() => {
+                var element = document.getElementById('about-me');
+                var headerOffset = 100;
+                  var elementPosition = element.getBoundingClientRect().top;
+                var offsetPosition = elementPosition + window.scrollY - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                }); 
+              }}
+            >
+              About Me
+            </a>
           </li>
           <li>
-            <a href="#work" className="hover-shadow">Work</a>
+            <a
+              // href="#work"
+              className="hover-shadow"
+              onClick={() => {
+                var element = document.getElementById('work');
+                var headerOffset = 100;
+                  var elementPosition = element.getBoundingClientRect().top;
+                var offsetPosition = elementPosition + window.scrollY - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                }); 
+              }}
+            >
+              Work
+            </a>
           </li>
-          <li >
-            <a href="#skills" className="hover-shadow">Skills</a>
+          <li>
+            <a
+              // href="#skills"
+              className="hover-shadow"
+              onClick={() => {
+                var element = document.getElementById('skills');
+                var headerOffset = 100;
+                  var elementPosition = element.getBoundingClientRect().top;
+                var offsetPosition = elementPosition + window.scrollY - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                }); 
+              }}
+            >
+              Skills
+            </a>
           </li>
         </ul>
       </div>
