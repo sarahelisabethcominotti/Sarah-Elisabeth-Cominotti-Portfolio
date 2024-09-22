@@ -26,6 +26,7 @@ function CardsContent() {
             {card.backgroundImage && (
               <a target="blank" href={card.projectLink}>
                 <img
+                  // className="card-image"
                   src={card.backgroundImage.url}
                   alt={card.title}
                   height="200px"

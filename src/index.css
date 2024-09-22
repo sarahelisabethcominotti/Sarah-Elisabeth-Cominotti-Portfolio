@@ -210,6 +210,10 @@ h2 {
   color: #d9ff00;
 }
 
+/* .card-image:hover {
+  transform: scale(1.2)
+} */
+
 @media (max-width: 600px) {
   .navigation {
     display: none;
