@@ -7,7 +7,7 @@ function Navigation() {
       <div className="contacts">
         <ul>
           <li>
-            <a href="mailto:sarahelisabethcominotti@gmail.com" target="_blank">
+            <a aria-label="Open email app to send an email" href="mailto:sarahelisabethcominotti@gmail.com" target="_blank">
               <svg
                 height="30px"
                 width="30px"
@@ -36,7 +36,7 @@ function Navigation() {
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/sarah-elisabeth-cominotti/" target="_blank">
+            <a aria-label="Open LinkedIn profile link" href="https://www.linkedin.com/in/sarah-elisabeth-cominotti/" target="_blank">
               <svg
                 width="31px"
                 height="31px"
@@ -52,7 +52,7 @@ function Navigation() {
             </a>
           </li>
           <li>
-            <a href="https://github.com/sarahelisabethcominotti" target="_blank">
+            <a aria-label="Open Github profile link" href="https://github.com/sarahelisabethcominotti" target="_blank">
               <svg
                 width="30px"
                 height="30px"
@@ -80,7 +80,7 @@ function Navigation() {
       <div className="navigation">
         <ul>
           <li>
-            <a
+            <a aria-label="Navigate to the About Me section of the page"
               // href="#about-me"
               className="hover-shadow"
               onClick={() => {
@@ -99,7 +99,7 @@ function Navigation() {
             </a>
           </li>
           <li>
-            <a
+            <a aria-label="Navigate to the Work section of the page"
               // href="#work"
               className="hover-shadow"
               onClick={() => {
@@ -118,7 +118,7 @@ function Navigation() {
             </a>
           </li>
           <li>
-            <a
+            <a aria-label="Navigate to the skills section of the page"
               // href="#skills"
               className="hover-shadow"
               onClick={() => {

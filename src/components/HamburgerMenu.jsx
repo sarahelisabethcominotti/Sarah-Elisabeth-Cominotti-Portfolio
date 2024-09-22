@@ -21,7 +21,7 @@ function HamburgerMenu() {
     <div className="topnav">
       {/* <a href="#home" className="active">Logo</a> */}
       <div id="myLinks">
-        <a
+        <a aria-label="Navigate to the About Me section of the page"
           // href="#about-me"
           onClick={() => {
             var element = document.getElementById('about-me');
@@ -37,7 +37,7 @@ function HamburgerMenu() {
         >
           About Me
         </a>
-        <a
+        <a aria-label="Navigate to the Work section of the page"
           // href="#work"
           onClick={() => {
             var element = document.getElementById('work');
@@ -53,7 +53,7 @@ function HamburgerMenu() {
         >
           Work
         </a>
-        <a
+        <a aria-label="Navigate to the Skills section of the page"
           // href="#skills"
           onClick={() => {
             var element = document.getElementById('skills');
@@ -70,7 +70,7 @@ function HamburgerMenu() {
           Skills
         </a>
       </div>
-      <a href="javascript:void(0);" className="icon" onClick={hamburgerToggle}>
+      <a aria-label="Open hamburger menu" href="javascript:void(0);" className="icon" onClick={hamburgerToggle}>
         <i className="fa fa-bars" id="hamburger"></i>
         <p id="cross">X</p>
       </a>

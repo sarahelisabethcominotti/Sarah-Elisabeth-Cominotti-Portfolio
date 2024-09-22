@@ -24,7 +24,7 @@ function CardsContent() {
               ))}
             </div>
             {card.backgroundImage && (
-              <a target="blank" href={card.projectLink}>
+              <a target="blank" href={card.projectLink} aria-label="Open project link"> 
                 <img
                   // className="card-image"
                   src={card.backgroundImage.url}
@@ -36,7 +36,7 @@ function CardsContent() {
             )}
             <div className="link-icons">
               {card.projectLink && (
-                <a target="blank" href={card.projectLink}>
+                <a target="blank" href={card.projectLink} aria-label="Open project link">
                   <svg
                     fill="#fff"
                     width="30px"
@@ -49,7 +49,7 @@ function CardsContent() {
                 </a>
               )}
               {card.gitHubLink && (
-                <a href={card.gitHubLink}>
+                <a href={card.gitHubLink} aria-label="Open github page of the project">
                   <svg
                     width="30px"
                     height="30px"
