@@ -1,3 +1,9 @@
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
 :root {
   font-family: "Tilt Neon", sans-serif;
   line-height: 1.5;
@@ -22,7 +28,8 @@ body {
   justify-content: space-between;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #060023;
+  z-index: 1;
+  /* background-color: #060023; */
 }
 
 nav {
@@ -134,6 +141,7 @@ section {
     border: 2px solid white;
     box-shadow: 0px 0px 20px 5px #d9ff00, 0px 0px 20px 5px #d9ff00 inset;
     padding: 10px;
+    background-color: #060023;
     .tags-section {
       margin: 5px;
       display: flex;
