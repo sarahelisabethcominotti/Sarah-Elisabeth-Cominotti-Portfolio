@@ -12,6 +12,7 @@ import SkillsContent from "./components/SkillsSection";
 import HeaderSection from "./components/AboutMeSection";
 import Navigation from "./components/Navigation";
 import TitleSection from "./components/TitleSection";
+import ThreeScene from "./components/ThreeScene";
 
 export const CardsContext = createContext();
 export const SkillsContext = createContext();
@@ -134,54 +135,52 @@ function App() {
     const isMobile = window.matchMedia("(max-width: 600px)").matches;
     const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
 
-
     if (cards.length > 0) {
-      if(isMobile) {
-      gsap.from('.card-item', {
-        opacity: 0,
-        x: 100, 
-        duration: 1,
-        stagger: 0.5,
-        scrollTrigger: {
-          trigger: '.about-section',
-          start: 'bottom 100%',
-          end: '+=3800px', 
-          scrub: true,
-          markers: false, 
-        },
-      });
-    } else {
-      if (isDesktop) {
-        gsap.from('.card-item', {
+      if (isMobile) {
+        gsap.from(".card-item", {
           opacity: 0,
           x: 100,
           duration: 1,
           stagger: 0.5,
           scrollTrigger: {
-            trigger: '.title-section',
-            start: 'bottom 150%', 
-            end: '+=2500px',
+            trigger: ".about-section",
+            start: "bottom 100%",
+            end: "+=3800px",
             scrub: true,
             markers: false,
           },
         });
       } else {
-        gsap.from('.card-item', {
-          opacity: 0,
-          x: 100,
-          duration: 1,
-          stagger: 0.5, 
-          scrollTrigger: {
-            trigger: '.title-section',
-            start: 'bottom 130%',
-            end: '+=3000px',
-            scrub: true,
-            markers: false,
-          },
-        });
+        if (isDesktop) {
+          gsap.from(".card-item", {
+            opacity: 0,
+            x: 100,
+            duration: 1,
+            stagger: 0.5,
+            scrollTrigger: {
+              trigger: ".title-section",
+              start: "bottom 150%",
+              end: "+=2500px",
+              scrub: true,
+              markers: false,
+            },
+          });
+        } else {
+          gsap.from(".card-item", {
+            opacity: 0,
+            x: 100,
+            duration: 1,
+            stagger: 0.5,
+            scrollTrigger: {
+              trigger: ".title-section",
+              start: "bottom 130%",
+              end: "+=3000px",
+              scrub: true,
+              markers: false,
+            },
+          });
+        }
       }
-    }
-      
     }
   }, [cards]);
 
@@ -191,6 +190,7 @@ function App() {
   // console.log(skills)
   return (
     <>
+      <ThreeScene />
       <Navigation />
       <TitleSection />
       <HeaderSection />
