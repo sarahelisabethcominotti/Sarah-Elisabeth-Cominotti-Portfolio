@@ -13,7 +13,7 @@ function ThreeScene() {
       0.1,
       1000
     );
-    const renderer = new THREE.WebGLRenderer();
+    const renderer = new THREE.WebGLRenderer({alpha: true});
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
     camera.position.setZ(30);
@@ -59,7 +59,7 @@ function ThreeScene() {
 
     // add background color
     // const spaceBackground = new THREE.TextureLoader().load("space.jpg");
-    scene.background = new THREE.Color(0x060023);
+    scene.background = null;
     //   renderer.render(scene, camera);
 
     //animate on scroll
@@ -107,12 +107,14 @@ function ThreeScene() {
       ref={mountRef}
       style={{
         position: "fixed",
-        // top: 0,
-        // left: 0,
-        // width: "100vw",
-        // height: "100vh",
+        top: 0,
+        left: 0,
+        width: "100vw",
+        height: "100vh",
         zIndex: -1,
         overflow: "hidden",
+        background: "radial-gradient(60% 50% at 50% 50%, #FBFCFCFF 0%, #632C63FF 0%, #060023 100%)"
+
       }}
     ></div>
   );
