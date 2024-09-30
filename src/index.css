@@ -195,6 +195,10 @@ section {
 
   p {
     text-align: left;
+    background-color: #060023;
+    border: 2px solid white;
+    box-shadow: 0px 0px 20px 5px #d9ff00, 0px 0px 20px 5px #d9ff00 inset;
+    padding: 20px;
   }
 }
 
@@ -269,6 +273,9 @@ h2 {
     display: block;
     div {
       display: block;
+    }
+    p {
+      margin: 20px
     }
   }
 }
