@@ -34,11 +34,13 @@ function ThreeScene() {
     const light = new THREE.AmbientLight(0xffffff);
     scene.add(light);
     // renderer.render(scene, camera);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 3);
+    scene.add(directionalLight);
 
     // HELPERS
     // const lightHelper = new THREE.PointLightHelper(light);
     // const girdHelper = new THREE.GridHelper(200, 50);
-    // scene.add(lightHelper, girdHelper);
+    // scene.add(lightHelper);
     const controls = new OrbitControls(camera, renderer.domElement);
 
     function addStars() {
