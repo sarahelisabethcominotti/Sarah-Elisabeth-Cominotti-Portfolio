@@ -13,6 +13,7 @@ import HeaderSection from "./components/AboutMeSection";
 import Navigation from "./components/Navigation";
 import TitleSection from "./components/TitleSection";
 import ThreeScene from "./components/ThreeScene";
+import ContactForm from "./components/ContactFrom";
 
 export const CardsContext = createContext();
 export const SkillsContext = createContext();
@@ -200,6 +201,7 @@ function App() {
       <SkillsContext.Provider value={skills}>
         {skills.length > 0 && <SkillsContent skills={skills} />}
       </SkillsContext.Provider>
+      {/* <ContactForm /> */}
     </>
   );
 }

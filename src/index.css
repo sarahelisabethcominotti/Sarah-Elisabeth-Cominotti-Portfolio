@@ -60,8 +60,8 @@ nav {
     a.icon {
       background: none;
       display: block;
-      right: 0;
-      top: 0;
+      right: 0px;
+      top: 0px;
     }
   }
 
@@ -96,11 +96,12 @@ nav {
     right: 6px;
     background-color: #060023;
     a {
-      padding: 5px 0;
+      padding: 5px 10px;
       border: 0.1px solid white;
       box-shadow: 0px 0px 10px 1px #ff00c8, 0px 0px 5px 1px #ff00c8 inset;
     }
   }
+
   #cross {
     display: none;
     width: 12px;
@@ -118,9 +119,22 @@ section {
   padding: 60px 0 0 0;
 }
 .skills-section {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  /* display: grid;
+  grid-template-columns: repeat(2, max(100px));
+  grid-template-rows: repeat(auto-fill);
+  justify-content: space-around;
+  /* border-color: black; */
+  /* border-radius: 5px; */
+
+  /* display: flex;
+  flex-direction: row; */
+  /* justify-content: space-between; */
+  display: grid;
+  grid-template-columns: repeat(6, max(100px));
+  grid-template-rows: repeat(auto-fill);
+  justify-content: space-around;
+  border-color: black;
+  border-radius: 5px;
   p {
     color: white;
   }
@@ -197,9 +211,16 @@ section {
     text-align: left;
     background-color: #060023;
     border: 2px solid white;
-    box-shadow: 0px 0px 20px 5px #d9ff00, 0px 0px 20px 5px #d9ff00 inset;
+    box-shadow: 0px 0px 20px 5px #fff, 0px 0px 20px 5px #fff inset;
     padding: 20px;
   }
+}
+
+.contact-section {
+  background-color: #060023;
+  border: 2px solid white;
+  box-shadow: 0px 0px 20px 5px #d9ff00, 0px 0px 20px 5px #d9ff00 inset;
+  padding: 20px;
 }
 
 .neon-title-text {
@@ -275,7 +296,7 @@ h2 {
       display: block;
     }
     p {
-      margin: 20px
+      margin: 20px;
     }
   }
 }
