@@ -29,7 +29,7 @@ export default function ContactForm() {
 
   return (
     <section>
-      <h2 id="about-me" className="neon-title-text">
+      <h2 id="contact-me" className="neon-title-text">
         Contact Me
       </h2>
       <div className="contact-section">

@@ -201,7 +201,7 @@ function App() {
       <SkillsContext.Provider value={skills}>
         {skills.length > 0 && <SkillsContent skills={skills} />}
       </SkillsContext.Provider>
-      {/* <ContactForm /> */}
+      <ContactForm />
     </>
   );
 }

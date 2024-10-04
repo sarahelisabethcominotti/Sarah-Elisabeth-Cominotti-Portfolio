@@ -69,6 +69,22 @@ function HamburgerMenu() {
         >
           Skills
         </a>
+        <a aria-label="Navigate to the contact me section of the page"
+          // href="#skills"
+          onClick={() => {
+            var element = document.getElementById('contact-me');
+            var headerOffset = 100;
+              var elementPosition = element.getBoundingClientRect().top;
+            var offsetPosition = elementPosition + window.scrollY - headerOffset;
+            
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            }); 
+          }}
+        >
+          Contact Me
+        </a>
       </div>
       <a aria-label="Open hamburger menu" href="javascript:void(0);" className="icon" onClick={hamburgerToggle}>
         <i className="fa fa-bars" id="hamburger"></i>

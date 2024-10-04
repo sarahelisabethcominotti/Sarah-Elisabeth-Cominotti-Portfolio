@@ -44,7 +44,7 @@ function ThreeScene() {
     const controls = new OrbitControls(camera, renderer.domElement);
 
     function addStars() {
-      const geometry = new THREE.SphereGeometry(0.25, 24, 24);
+      const geometry = new THREE.SphereGeometry(0.10, 10, 10);
       const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
       const star = new THREE.Mesh(geometry, material);
 

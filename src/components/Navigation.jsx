@@ -136,6 +136,25 @@ function Navigation() {
               Skills
             </a>
           </li>
+          <li>
+            <a aria-label="Navigate to the contact me section of the page"
+              // href="#skills"
+              className="hover-shadow"
+              onClick={() => {
+                var element = document.getElementById('contact-me');
+                var headerOffset = 100;
+                  var elementPosition = element.getBoundingClientRect().top;
+                var offsetPosition = elementPosition + window.scrollY - headerOffset;
+                
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                }); 
+              }}
+            >
+              Contact Me
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
