@@ -1,5 +1,6 @@
 // import { Button } from "@mui/material";
 import React from "react";
+const CONTACT_FORM_API = import.meta.env.VITE_CONTACT_FORM_ACCESS_KEY
 
 export default function ContactForm() {
   const [result, setResult] = React.useState("");
@@ -9,7 +10,7 @@ export default function ContactForm() {
     setResult("Sending....");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "24e59240-3125-47e7-ad81-53762c759ced");
+    formData.append("access_key", CONTACT_FORM_API);
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -34,12 +35,23 @@ export default function ContactForm() {
       </h2>
       <div className="contact-section">
         <form onSubmit={onSubmit}>
-          <p className="neon-text">Name: </p>
-          <input type="text" name="name" required />
-          <p className="neon-text">Email:</p> <input type="email" name="email" required />
-          <p className="neon-text">Message</p> <textarea name="message" required></textarea>
+          <div className="sender-details">
+            <div>
+              <p className="neon-text">Name: </p>
+              <input type="text" name="name" required placeholder="Your Name"/>
+            </div>
+            <div>
+              <p className="neon-text">Lastname: </p>
+              <input type="text" name="lastname" required placeholder="Your Lastname"/>
+            </div>
+          </div>
+          <div>
+            <p className="neon-text">Email:</p>
+            <input type="email" name="email" required placeholder="Your Email" />
+          </div>
+          <p className="neon-text ">Message</p>
+          <textarea rows="5" name="message" placeholder="Your Message" required></textarea>
           <br></br>
-          {/* <Button type="submit">Submit Form</Button> */}
           <button type="submit">Submit Form</button>
         </form>
         <span>{result}</span>

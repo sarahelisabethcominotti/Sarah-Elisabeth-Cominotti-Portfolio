@@ -1,6 +1,5 @@
 
-export const CARDS_API =
-  "https://api-eu-west-2.hygraph.com/v2/clxx583h704wj08w4kt0whrt9/master";
+export const CARDS_API = import.meta.env.VITE_CARDS_API
 
 export const getAllCards = `
 query MyQuery {
