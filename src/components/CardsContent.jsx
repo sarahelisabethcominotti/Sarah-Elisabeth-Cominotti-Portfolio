@@ -16,7 +16,7 @@ function CardsContent() {
             <p>{card.description}</p>
 
             {/* <p>Tags: {card.tag}</p> */}
-            <div className="tags-section">
+            <div className={`${card.tag.length > 4 ? "two-rows-tags" : "one-row-tags"} tags-section`}>
               {card.tag.map((tag) => (
                 <div key={tag} className="card-tag">
                   <p>{tag}</p>
