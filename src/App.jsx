@@ -14,6 +14,7 @@ import Navigation from "./components/Navigation";
 import TitleSection from "./components/TitleSection";
 import ThreeScene from "./components/ThreeScene";
 import ContactForm from "./components/ContactFrom";
+import SocialBar from "./components/SocialBar";
 
 export const CardsContext = createContext();
 export const SkillsContext = createContext();
@@ -202,6 +203,7 @@ function App() {
         {skills.length > 0 && <SkillsContent skills={skills} />}
       </SkillsContext.Provider>
       <ContactForm />
+      <SocialBar/>
     </>
   );
 }
