@@ -166,7 +166,7 @@ section {
       padding-top: 10px;
       
       .card-tag {
-        max-width: 75px;
+        /* max-width: 75px; */
         border: 2px solid white;
         box-shadow: 0px 0px 10px 0px #ff00c8, 0px 0px 10px 0px #ff00c8;
         border-radius: 7px;
