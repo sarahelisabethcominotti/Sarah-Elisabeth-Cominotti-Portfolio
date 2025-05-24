@@ -6,7 +6,7 @@ function HeaderSection() {
 
       <div className="about-section">
       <div>
-        <img src="/src/assets/sarah-elisabeth-cominotti-profile-picture.png" alt="picture of Sarah Elisabeth Cominotti"></img>
+        <img src="./src/assets/sarah-elisabeth-cominotti-profile-picture.png" alt="picture of Sarah Elisabeth Cominotti"></img>
      
           <p>
             I&apos;m a <span className="highlight-word">Junior Developer</span>{" "}
