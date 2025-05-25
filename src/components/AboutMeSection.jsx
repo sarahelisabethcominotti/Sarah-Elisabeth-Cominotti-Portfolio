@@ -1,4 +1,9 @@
+import { useContext } from "react";
+import { InfoContext } from "../App";
+
 function HeaderSection() {
+  const info = useContext(InfoContext)
+  console.log("not found", info)
   return (
     <section>
 
@@ -6,7 +11,7 @@ function HeaderSection() {
 
       <div className="about-section">
       <div>
-        <img src="../assets/sarah-elisabeth-cominotti-profile-picture.png" alt="picture of Sarah Elisabeth Cominotti"></img>
+        <img src={info.profilePicture.url} alt="picture of Sarah Elisabeth Cominotti"></img>
      
           <p>
             I&apos;m a <span className="highlight-word">Junior Developer</span>{" "}

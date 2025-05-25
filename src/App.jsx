@@ -9,15 +9,18 @@ import { CARDS_API, getAllCards } from "./CARDS_API";
 import CardsContent from "./components/CardsContent";
 import { SKILLS_API, getAllSkills } from "./SKILLS_API";
 import SkillsContent from "./components/SkillsSection";
+import { INFO_API, getAllInfo } from "./INFO_API";
 import HeaderSection from "./components/AboutMeSection";
 import Navigation from "./components/Navigation";
 import TitleSection from "./components/TitleSection";
 import ThreeScene from "./components/ThreeScene";
 import ContactForm from "./components/ContactFrom";
 import SocialBar from "./components/SocialBar";
+// import { create } from "@mui/material/styles/createTransitions";
 
 export const CardsContext = createContext();
 export const SkillsContext = createContext();
+export const InfoContext = createContext()
 // export const SkillsContext = createContext()
 // const initalCards = null
 
@@ -90,12 +93,13 @@ function App() {
 
   const [cards, setCards] = useState([]);
   const [skills, setSkills] = useState([]);
+  const [info, setInfo] = useState([]);
   // const [dataSet, setDataSet] = useState([]);
 
   const { isLoading, error, data } = useQuery({
     queryKey: ["cards"],
     queryFn: async () => {
-      const [cardsRes, skillsRes] = await Promise.all([
+      const [cardsRes, skillsRes, infoRes] = await Promise.all([
         fetch(CARDS_API, {
           method: "POST",
           headers: {
@@ -112,15 +116,26 @@ function App() {
           },
           body: JSON.stringify({ query: getAllSkills }),
         }),
+        fetch(INFO_API, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+            Authorization: "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImdjbXMtbWFpbi1wcm9kdWN0aW9uIn0.eyJ2ZXJzaW9uIjozLCJpYXQiOjE3NDgxNzU5MTcsImF1ZCI6WyJodHRwczovL2FwaS1ldS13ZXN0LTIuaHlncmFwaC5jb20vdjIvY2x4eDU4M2g3MDR3ajA4dzRrdDB3aHJ0OS9tYXN0ZXIiLCJtYW5hZ2VtZW50LW5leHQuZ3JhcGhjbXMuY29tIl0sImlzcyI6Imh0dHBzOi8vbWFuYWdlbWVudC1ldS13ZXN0LTIuaHlncmFwaC5jb20vIiwic3ViIjoiNDk3YjQ5NjEtNjczMy00ZTA1LWJmYzYtNDM1NWQ4MmE5YjQ1IiwianRpIjoiY21iM21zejhxMmsxODA3bW1ldHVtNWs4eCJ9.B90oP-IZerK96CI8Z61JM7e1PGI7HdIGSJbfE3J_UDVtCVF3GQ1SFPe6CXL5ZndA0dN0pDmtDTmqb43-z1zanKOxxRceZGeI1273hpdcHfeFKo4BpcAm6KtQwzQABSv8boB4Eo_pv-LXgyt94pMpldNMZwHISylAIwrS3D1qRZzf9znSJG6x1iF3qWVVaDjfY2WBhBFTqPkCr_WfbgFu2Zl5me5o76cwplhLJpEQNE8ZQtLCwastLU_l8Z12P3Oc1YQbZvOvK3mBjOZudFZN9UD4YZutIRsVzBdfOcX-JJ5oSKEQGVcylbNlqklQBtg-lU-OhrWhYyClbaMJbS9AR1JhqYazoVaO8Io9kxMMWDCvHU1ZBxs5NG6rEGutj3IhSJbkLmV_o8r-DnEaOHykS-cPHYOc9Sy-3DyXzQZ_PkMAwHt7zbqyubJmAYf6Gh0sj4ha_QH5_WtSFX8rrU5pMV2NcegSm87S74uhw8AuV3fUFZn66OndgO5alrBWSqK9TVFlczv0T74TFBbR3JT7dAIjDeYWwmJZ1kYyMg_ewdJ9SA9EHi0nljWD6EYkz_loas8jIu_nUvErLEieUz1S5FtORU2mLXGBWzCykygihH1m--UDsNFOgKVJnBM8ipR9knernZFITHtWCo6UwPX2SJ_KEGfeDL0X9AiUKTU35HE"
+          },
+          body: JSON.stringify({ query: getAllInfo }),
+        }),
       ]);
 
+      if (!infoRes.ok) throw new Error("Failed to fetch info");
       if (!cardsRes.ok) throw new Error("Failed to fetch cards");
       if (!skillsRes.ok) throw new Error("Failed to fetch skills");
 
       const cards = await cardsRes.json();
       const skills = await skillsRes.json();
-      // console.log('asbcs',cards, skills)
-      return { cards, skills };
+      const info = await infoRes.json()
+      // console.log('asbcs',cards, skills, info)
+      return { cards, skills, info };
     },
   });
 
@@ -129,7 +144,9 @@ function App() {
       // const cards = data.data.portfolioCards
       setCards(data.cards.data.portfolioCards);
       setSkills(data.skills.data.portfolioSkills);
-      console.log(data.skills.data.portfolioSkills[1].logo.url);
+      setInfo(data.info.data.generalInfo)
+      console.log(data.info.data.generalInfo)
+      // console.log(data.skills.data.portfolioSkills[1].logo.url);
     }
   }, [data]);
 
@@ -195,7 +212,9 @@ function App() {
       <ThreeScene />
       <Navigation />
       <TitleSection />
-      <HeaderSection />
+      <InfoContext.Provider value={info}>
+      <HeaderSection info={info}/>
+      </InfoContext.Provider>
       <CardsContext.Provider value={cards}>
         {cards.length > 0 && <CardsContent cards={cards} />}
       </CardsContext.Provider>
