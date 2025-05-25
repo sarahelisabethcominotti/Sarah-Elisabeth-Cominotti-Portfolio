@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { InfoContext } from "../App";
-import sarahImage from "/Users/sarahelisabethcominotti/Documents/GitHub/Neon-Sarah-Elisabeth-Cominotti-Portfolio/src/assets/sarah-elisabeth-cominotti-profile-picture.png"
+import sarahImage from "../assets/sarah-elisabeth-cominotti-profile-picture.png"
 
 function HeaderSection() {
   const info = useContext(InfoContext)
