@@ -126,7 +126,6 @@ function App() {
           body: JSON.stringify({ query: getAllInfo }),
         }),
       ]);
-
       if (!infoRes.ok) throw new Error("Failed to fetch info");
       if (!cardsRes.ok) throw new Error("Failed to fetch cards");
       if (!skillsRes.ok) throw new Error("Failed to fetch skills");
@@ -134,21 +133,23 @@ function App() {
       const cards = await cardsRes.json();
       const skills = await skillsRes.json();
       const info = await infoRes.json()
-      // console.log('asbcs',cards, skills, info)
+      console.log('asbcs',cards, skills, info)
       return { cards, skills, info };
     },
   });
-
+// console.log(data)
   useEffect(() => {
     if (data) {
       // const cards = data.data.portfolioCards
       setCards(data.cards.data.portfolioCards);
       setSkills(data.skills.data.portfolioSkills);
-      setInfo(data.info.data.generalInfo)
-      console.log(data.info.data.generalInfo)
+      // setInfo(data.info.data.generalInfo)
       // console.log(data.skills.data.portfolioSkills[1].logo.url);
     }
   }, [data]);
+
+        // console.log(info)
+
 
   useEffect(() => {
     const isMobile = window.matchMedia("(max-width: 600px)").matches;
@@ -213,7 +214,9 @@ function App() {
       <Navigation />
       <TitleSection />
       <InfoContext.Provider value={info}>
-      <HeaderSection info={info}/>
+        {/* {info.length > 0 &&  */}
+        <HeaderSection info={info}/>
+
       </InfoContext.Provider>
       <CardsContext.Provider value={cards}>
         {cards.length > 0 && <CardsContent cards={cards} />}

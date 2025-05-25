@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { InfoContext } from "../App";
+import sarahImage from "/Users/sarahelisabethcominotti/Documents/GitHub/Neon-Sarah-Elisabeth-Cominotti-Portfolio/src/assets/sarah-elisabeth-cominotti-profile-picture.png"
 
 function HeaderSection() {
   const info = useContext(InfoContext)
@@ -11,7 +12,10 @@ function HeaderSection() {
 
       <div className="about-section">
       <div>
-        <img src={info.profilePicture.url} alt="picture of Sarah Elisabeth Cominotti"></img>
+        {/* <img src={info.profilePicture.url} alt="picture of Sarah Elisabeth Cominotti"></img> */}
+        {/* <img src="../assets/sarah-elisabeth-cominotti.png" alt="picture of Sarah Elisabeth Cominotti"></img> */}
+        <img src={sarahImage} alt="picture of Sarah Elisabeth Cominotti"></img>
+
      
           <p>
             I&apos;m a <span className="highlight-word">Junior Developer</span>{" "}
